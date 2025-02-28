@@ -1,26 +1,33 @@
 body {
-    text-align: center;
+    font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
     
 }
 
-.wrapper {
+/*.wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
     align-items: center;
     height: 70vh;
     width: 100vw;
-    }
+    }*/
 
 #container {
     display: flex;
     flex-wrap: wrap;
     max-width: 960px;
-    width: 480px;
-    height: 480px;
-
+    width: 960px;
+    height: 960px;
+    margin: 20px auto;
     border: 2px solid black;
-    
-    
+        }
 
-}
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+          }
