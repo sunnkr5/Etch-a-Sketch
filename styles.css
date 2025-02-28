@@ -7,8 +7,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    align-items: center;
     height: 70vh;
-    border: 1px solid green;
     width: 100vw;
     }
 
@@ -19,7 +19,7 @@ body {
     width: 480px;
     height: 480px;
 
-    border: 1px solid red;
+    border: 2px solid black;
     
     
 
