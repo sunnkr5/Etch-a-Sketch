@@ -13,7 +13,7 @@ function setGrid(squareNos) {
         
         content.addEventListener("mouseenter", () => {
             content.style.background = "green";
-        })
+        });
     }
 }
 console.log(setGrid(16));
@@ -52,8 +52,23 @@ button.addEventListener("click", () => {
 
 
 const randomColourGrid = document.querySelector('.random-colour');
+
+
 randomColourGrid.addEventListener("click", () => {
-    alert("test");
+
+    container.innerHTML = '';
+    setGrid(16);
+    
+    function randomRGB() {
+        const r = Math.floor(Math.random() * 256); // Red: 0-255
+        const g = Math.floor(Math.random() * 256); // Green: 0-255
+        const b = Math.floor(Math.random() * 256); // Blue: 0-255
+      
+        return `rgb(${r}, ${g}, ${b})`;
+      }
+      
+      console.log(randomRGB());
+      
 
 });
 
