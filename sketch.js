@@ -19,6 +19,36 @@ function setGrid(squareNos) {
 console.log(setGrid(16));
 
 
+const button = document.querySelector("button");
+
+button.addEventListener("click", () => {
+    let userInput = prompt("Enter a number between 1 and 100");
+
+    // If the user clicks "Cancel" (userInput will be null)
+    if (userInput === null) {
+        alert("Action canceled! No changes were made.");
+        return; // Exit the function early if the user clicked cancel
+    }
+
+    // If the user input is empty (""), display a message
+    if (userInput.trim() === "") {
+        alert("Please enter a valid number between 1 and 100.");
+        return;
+    }
+
+    // Convert user input to a number
+    let num = Number(userInput);
+
+    // Check if input is a valid number
+    if (isNaN(num)) {
+        alert("Wrong Input! Enter only numbers.");
+    } else if (num < 1 || num > 100) {
+        alert("Wrong Input! Enter a number between 1 and 100.");
+    } else {
+        container.innerHTML = ''; // Clear existing grid
+        setGrid(num); // Create new grid with user input
+    }
+});
 
 
 
