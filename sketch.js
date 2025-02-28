@@ -51,7 +51,17 @@ button.addEventListener("click", () => {
 });
 
 
+const randomColourGrid = document.querySelector('.random-colour');
+randomColourGrid.addEventListener("click", () => {
+    alert("test");
 
+});
+
+const reset = document.querySelector('.reset');
+reset.addEventListener("click", () => {
+    container.innerHTML = '';
+    setGrid(16);
+});
         
 
 

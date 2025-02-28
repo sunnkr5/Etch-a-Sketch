@@ -35,3 +35,11 @@ body {
     background-color: orange;
     margin: 5px;
 }
+
+.random-colour {
+    margin-left: 5px;
+}
+
+.reset {
+    margin-left: 5px;
+}
