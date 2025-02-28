@@ -10,9 +10,17 @@ function setGrid(squareNos) {
         content.style.width = hw + 'px';
         content.style.height = hw + 'px';
         container.appendChild(content);
+        
+        content.addEventListener("mouseenter", () => {
+            content.style.background = "green";
+        })
     }
 }
-console.log(setGrid(4));
+console.log(setGrid(16));
+
+
+
+
 
         
 
