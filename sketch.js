@@ -56,8 +56,8 @@ const randomColourGrid = document.querySelector('.random-colour');
 
 randomColourGrid.addEventListener("click", () => {
 
-    container.innerHTML = '';
-    setGrid(16);
+    
+    
     
     function randomRGB() {
         const r = Math.floor(Math.random() * 256); // Red: 0-255
@@ -69,7 +69,24 @@ randomColourGrid.addEventListener("click", () => {
       
       console.log(randomRGB());
       
-
+      function randomColourGrid(squareNos) {
+        let s1 = squareNos * squareNos;
+        let hw = (960 - (squareNos * 10)) / squareNos;
+        for (let index = 0; index < s1; index++) {
+            const content = document.createElement("div");
+            content.classList.add('content-grids');
+            content.style.width = hw + 'px';
+            content.style.height = hw + 'px';
+            container.appendChild(content);
+            
+            content.addEventListener("mouseenter", () => {
+                content.style.background = randomRGB();
+            });
+        }
+    }
+    let userInput = prompt("Enter a number between 1 and 100");
+    container.innerHTML = '';
+    console.log(randomColourGrid(userInput));
 });
 
 const reset = document.querySelector('.reset');
