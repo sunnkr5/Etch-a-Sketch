@@ -43,3 +43,9 @@ body {
 .reset {
     margin-left: 5px;
 }
+.white-grids {
+    background-color: white;
+    margin: 4px;
+    border: 1px solid black;
+    
+}

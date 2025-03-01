@@ -95,7 +95,45 @@ reset.addEventListener("click", () => {
     setGrid(16);
 });
         
+const opacity = document.querySelector('#opacity');
 
+
+opacity.addEventListener("click", () => {
+
+    function whiteGrid(squareNos) {
+        let s1 = squareNos * squareNos;
+        let hw = (960 - (squareNos * 10)) / squareNos;
+
+        // Create the grid of squares
+        for (let index = 0; index < s1; index++) {
+            const content = document.createElement("div");
+            content.classList.add('white-grids');
+            content.style.width = hw + 'px';
+            content.style.height = hw + 'px';
+            container.appendChild(content);
+
+            // Initialize darkening level for each square
+            let darkeningLevel = 0;
+
+            // Add event listener for mouse enter on each grid square
+            content.addEventListener("mouseenter", () => {
+
+                // Darken the square
+                if (darkeningLevel < 10) {
+                    darkeningLevel++;
+                    const newColor = 255 - (darkeningLevel * 25); // Darkens by 25 per level (10 levels = fully black)
+                    content.style.backgroundColor = `rgb(0, ${newColor}, 0)`;
+                }
+            });
+        }
+    }
+
+    // Clear previous grid if any
+    container.innerHTML = '';
+
+    // Generate a grid of 16x16 squares
+    whiteGrid(16);
+});
 
 
 
