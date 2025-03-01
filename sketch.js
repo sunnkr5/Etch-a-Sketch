@@ -95,10 +95,10 @@ reset.addEventListener("click", () => {
     setGrid(16);
 });
         
-const opacity = document.querySelector('#opacity');
+const darkening = document.querySelector('#darkening');
 
 
-opacity.addEventListener("click", () => {
+darkening.addEventListener("click", () => {
 
     function whiteGrid(squareNos) {
         let s1 = squareNos * squareNos;
